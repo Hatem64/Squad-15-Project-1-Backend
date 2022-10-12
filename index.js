@@ -29,7 +29,7 @@ const solve=  Apprentice.create({
 const admin = Admin.create({
     user_name: "samson",
     password: "01000",
-    e_mail: "youssefackraman354@gmail.com",
+    e_mail: "",
     apprentice: [solve.__id]
 })
 
