@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors"
 import cookieParser from "cookie-parser";
 import connectDB from "./db/connect.js";
-// import userRouter from "./routes/user.js"
+import router from "./routes/user.js"
 import morgan from "morgan"
 
 // CONSTANTS
@@ -27,7 +27,9 @@ app.use(morgan('tiny'))
 
 //ROUTES
 // app.use('/api/users',userRouter);
-
+app.get('/',(req,res)=>{
+    res.send("hello")
+})
 
 // SERVER
 connectDB(DBURI);
