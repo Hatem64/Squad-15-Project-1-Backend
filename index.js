@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors"
 import cookieParser from "cookie-parser";
 import connectDB from "./db/connect.js";
-import router from "./routes/user.js"
+import router from "./routes/userRoute.js"
 import morgan from "morgan"
 
 // CONSTANTS
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(morgan('tiny'))
 
 //ROUTES
-// app.use('/api/users',userRouter);
+app.use('/api/users',router);
 app.get('/',(req,res)=>{
     res.send("hello")
 })
